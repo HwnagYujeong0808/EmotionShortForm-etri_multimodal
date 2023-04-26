@@ -69,7 +69,7 @@
   + concatenate_lstm_model.pt
   + multimodal_model.pt
   
-+ 모델 성능 비교
++ **모델 성능 비교**
   + **음성 감정 기반 하이라이트 추출 모델**
     + run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
   + **영상 기반 하이라이트 추출 모델**
