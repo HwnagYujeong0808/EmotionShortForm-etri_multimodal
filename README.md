@@ -5,7 +5,8 @@
 ## 프로젝트 소개
 + 본 연구에서는 *음성에서 추출한 감정 정보*와 *영상에서 추출한 이미지*를 동시에 활용하는 **멀티모달 모델**을 제안하고, 이를 활용한 유튜브 하이라이트 자동 추출 모델을 제안한다. 제안하는 핵심 아이디어는 **Vision Transformer(ViT)** 모델로부터 추출한 영상 프레임 특징과 **Long Short-Term Memory(LSTM)** 기반 감정 분류 및 예측 모델을 통해 추출한 감정 특징을 함께 사용하는 멀티모달 모델을 구성한 것이다. 제안하는 방법의 효용성을 보이기 위하여 제안하는 모델과 음성 또는 영상만을 활용했을 때의 모델 성능을 비교한다. 실험 결과, 영상 특징 기반 ViT 모델 및 음성 감정 특징 기반 LSTM 모델보다, 제안한 멀티모달 모델의 **F1 Score**가 각각 약 **7.23%, 16.60%** 정도 향상됨을 보였다.
 
-## 데이터셋 
+## 데이터셋 소개 및 생성 
+
 + **데이터 1: ETRI 한국어 감정 데이터셋 KEMDy20 (일반인 대상 자유발화) 데이터셋**
   + **링크**: [KEMDy20_데이터셋](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
   + **소개**: 발화 음성, 발화의 문맥적 의미 및 생리반응 신호- 피부전도도, 맥박관련 데이터, 손목 피부온도와 발화자의 감정과의 연관성 분석을 위해 수집한 멀티모달 감정 데이터셋
@@ -25,18 +26,14 @@
       + './data_audio/wav_only/train', './data_audio/wav_only/test' 폴더 내에 wav 파일 나누어 저장
 
 ## 실행 방법
-+ 
-
-### 데이터셋 생성
 
 ### 모델 학습 및 모델 생성
-#### 음성 감정 분류 모델, 각성도 예측 모델, 긍/부정도 예측 모델 학습 및 저장
-+ 음성 feature들을 concatenate하기 위한 .npy 파일 생성
++ 멀티모달 방식에서 쓰일 특징 벡터들을 concatenate 하기 위해 오디오, 비디오 특징 .npy 파일 생성
 1) **LSTM 기반 음성 감정 분류 모델**
   + run [audio_emotion_baseline_oversampling_SMOTE.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/audio_emotion_baseline_oversampling_SMOTE.ipynb)
     + *emotion_lstm_features.npy* 생성 및 음성 감정 특징 저장 
   + run [youtube_감정분류모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8.ipynb)
-    + *lstm_emotion_classification_model_best.pt* 모델 저장
+    + *lstm_emotion_classification_model.pt* 모델 저장
     
 2) **LSTM 기반 음성 각성도 예측 모델**
   + run [lstm_arousal.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_arousal.ipynb)
@@ -51,30 +48,36 @@
     + *lstm_valence_model.pt* 모델 저장
    
 
-4) **음성 감정 기반 하이라이트 추출 모델**
+4) **음성 감정 기반 하이라이트 추출 LSTM 모델**
   + run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
     + *concatenate_features_array.npy* 생성 및 concatenate된 오디오 특징 저장
     + *concatenate_lstm_model.pt* 모델 저장
     
- 5) **영상 기반 하이라이트 추출 모델**
- 
-  
+5) **영상 기반 하이라이트 추출 VIT 모델**
+  + run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
+    + *concatenate_vit_features_array.npy* 생성 및 영상 프레임 특징 저장
 
-
-+ **LSTM 기반 멀티모달 하이라이트 추출 모델**
-  + multimodal_lstm.ipynb
+6) **영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 LSTM 모델**  
+  + run [multimodal_lstm.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm.ipynb)
+    + *multimodal_model.pt* 모델 저장
 
 ### 모델 추론
-+ 모델 불러오기
-  + multimodal_model.pt
-  + lstm_emotion_classification_model.pt
++ **모델 불러오기**
+  + lstm_emotion_classification_model.pt 
   + lstm_arousal_model_best.pt
-
-
+  + lstm_valence_model.pt
+  + concatenate_lstm_model.pt
+  + multimodal_model.pt
   
-+ final_vit_video.ipynb
-+ final-audio.ipynb
-+ final_audio+video_best.ipynb
++ 모델 성능 비교
+  + **음성 감정 기반 하이라이트 추출 모델**
+    + run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
+  + **영상 기반 하이라이트 추출 모델**
+    + run [final-audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final-audio.ipynb)
+  + **영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델**
+    + run [final_audio+video_best.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio%2Bvideo_best.ipynb)
+  
+## 결과
 
 
 ## 프로젝트 구조
