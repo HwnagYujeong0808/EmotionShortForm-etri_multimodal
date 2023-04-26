@@ -17,9 +17,7 @@
 
 
 ## 프로젝트 구조
-<center><img src="/img/architecture_img.png" width="300" height="300"></center>
-
-
+![image](https://user-images.githubusercontent.com/66208800/234458258-45c80130-3fe2-4979-9a5c-073a1f428bba.png)
 
 
 
