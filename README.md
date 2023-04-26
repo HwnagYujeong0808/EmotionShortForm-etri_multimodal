@@ -30,6 +30,9 @@
 ### 데이터셋 생성
 
 ### 모델 학습
++ youtube_Arousal예측모델.ipynb
++ youtube_Valence예측모델.ipynb
++ youtube_감정분류모델.ipynb
 
 ### 모델 추론
 
