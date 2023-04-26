@@ -29,12 +29,52 @@
 
 ### 데이터셋 생성
 
-### 모델 학습
-+ youtube_Arousal예측모델.ipynb
-+ youtube_Valence예측모델.ipynb
-+ youtube_감정분류모델.ipynb
+### 모델 학습 및 모델 생성
+#### 음성 감정 분류 모델, 각성도 예측 모델, 긍/부정도 예측 모델 학습 및 저장
++ 음성 feature들을 concatenate하기 위한 .npy 파일 생성
+1) **LSTM 기반 음성 감정 분류 모델**
+  + run [audio_emotion_baseline_oversampling_SMOTE.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/audio_emotion_baseline_oversampling_SMOTE.ipynb)
+    + *emotion_lstm_features.npy* 생성 및 음성 감정 특징 저장 
+  + run [youtube_감정분류모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8.ipynb)
+    + *lstm_emotion_classification_model_best.pt* 모델 저장
+    
+2) **LSTM 기반 음성 각성도 예측 모델**
+  + run [lstm_arousal.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_arousal.ipynb)
+    + *arousal_lstm_features.npy* 생성 및 각성도 특징 저장
+  + run [youtube_Arousal예측모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_Arousal%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8.ipynb)
+    + *lstm_arousal_model_best.pt* 모델 저장
+  
+3) **LSTM 기반의 음성 긍/부정도 예측 모델**
+  + run [lstm_valence.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_valence.ipynb)
+    + *valence_lstm_features.npy* 생성 및 긍/부정도 특징 저장
+  + run [youtube_Valence예측모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_Valence%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8.ipynb)
+    + *lstm_valence_model.pt* 모델 저장
+   
+
+4) **음성 감정 기반 하이라이트 추출 모델**
+  + run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
+    + *concatenate_features_array.npy* 생성 및 concatenate된 오디오 특징 저장
+    + *concatenate_lstm_model.pt* 모델 저장
+    
+ 5) **영상 기반 하이라이트 추출 모델**
+ 
+  
+
+
++ **LSTM 기반 멀티모달 하이라이트 추출 모델**
+  + multimodal_lstm.ipynb
 
 ### 모델 추론
++ 모델 불러오기
+  + multimodal_model.pt
+  + lstm_emotion_classification_model.pt
+  + lstm_arousal_model_best.pt
+
+
+  
++ final_vit_video.ipynb
++ final-audio.ipynb
++ final_audio+video_best.ipynb
 
 
 ## 프로젝트 구조
