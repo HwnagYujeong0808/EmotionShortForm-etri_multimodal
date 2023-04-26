@@ -11,10 +11,10 @@
   + **링크**: [KEMDy20_데이터셋](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
   + **소개**: 발화 음성, 발화의 문맥적 의미 및 생리반응 신호- 피부전도도, 맥박관련 데이터, 손목 피부온도와 발화자의 감정과의 연관성 분석을 위해 수집한 멀티모달 감정 데이터셋
   + **Train set**
-    + 다운 경로: 01.데이터/2.Validation/원천데이터/VS_유튜브_04
+    + 다운 경로: '01.데이터/2.Validation/원천데이터/VS_유튜브_04'
     + 가장 용량이 적은 21.4GB 폴더 안에 있는 영상 데이터만 사용함
   + **Test set**
-    + 다운 경로: 01.데이터/2.Validation/원천데이터/VS_유튜브_01
+    + 다운 경로: '01.데이터/2.Validation/원천데이터/VS_유튜브_01'
     + 폴더 안에 있는 8개의 영상 데이터만 사용함
       + '유튜브_기타_19843', '유튜브_반려동물및동물_2153', '유튜브_스타일링및뷰티_14630', '유튜브_스포츠_4174', '유튜브_여행_7640', '유튜브_음식_17341', '유튜브_일상_10479', '유튜브_자동차_0094'
 
@@ -63,11 +63,11 @@
 
 ### 모델 추론
 + **모델 불러오기**
-  + lstm_emotion_classification_model.pt 
-  + lstm_arousal_model_best.pt
-  + lstm_valence_model.pt
-  + concatenate_lstm_model.pt
-  + multimodal_model.pt
+  + *lstm_emotion_classification_model.pt*
+  + *lstm_arousal_model_best.pt*
+  + *lstm_valence_model.pt*
+  + *concatenate_lstm_model.pt*
+  + *multimodal_model.pt*
   
 + **모델 성능 비교**
   + **음성 감정 기반 하이라이트 추출 모델**
