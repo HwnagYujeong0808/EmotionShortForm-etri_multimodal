@@ -1,16 +1,10 @@
 # Create Audio MFCC Features 
 
-## Baseline_mfcc.ipynb
+## 1) split_data.ipynb
++ Split the train, test data 8:2. 
+
+## 2) Baseline_mfcc.ipynb
 + Create MFCC features csv file in './preprocessing_csv' forder
 
-## EDA_ETRI_Emotion.ipynb
-+ 
-
-## audio_classifier.ipynb
-+
-
-## lstm_feature_concatenate.ipynb
-+
-
-## unzip_and_convert_mp4_to_wav.ipynb
-+ 
+## 3) unzip_and_convert_mp4_to_wav.ipynb
++ Unzip the zip file and convert .mp4 to .wav
