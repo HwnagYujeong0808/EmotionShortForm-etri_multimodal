@@ -7,7 +7,7 @@
 
 ## 데이터셋 
 + **데이터 1: ETRI 한국어 감정 데이터셋 KEMDy20 (일반인 대상 자유발화) 데이터셋**
-  + **링크**: https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR
+  + **링크**: [KEMDy20_데이터셋](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
   + **소개**: 발화 음성, 발화의 문맥적 의미(lexical) 및 생리반응 신호- 피부전도도(EDA-electrodermal activity), 맥박관련 데이터(IBI-Inter-Beat-Interval), 손목 피부온도와 발화자의 감정과의 연관성 분석을 위해 수집한 멀티모달 감정 데이터셋
   + **Train set**
     + 다운 경로: 01.데이터/2.Validation/원천데이터/VS_유튜브_04
@@ -18,8 +18,9 @@
       + '유튜브_기타_19843', '유튜브_반려동물및동물_2153', '유튜브_스타일링및뷰티_14630', '유튜브_스포츠_4174', '유튜브_여행_7640', '유튜브_음식_17341', '유튜브_일상_10479', '유튜브_자동차_0094'
 
 + **데이터 2: AI HUB 동영상 콘텐츠 하이라이트 편집 및 설명(요약) 데이터**
-    + **링크**: https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=616
+    + **링크**:  [AIHUB_데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=616)
     + **소개**: AI HUB에서 수집한 동영상 콘텐츠 하이라이트 편집 및 설명(요약) 데이터셋은 뉴스 및 유튜브 영상에서 주요 장면의 위치를 레이블링하고 카테고리 항목에 대해 태깅하여 구축한 학습용 데이터셋
+    +  ./audio_baseline/split_data.ipynb
 
 ## 실행 방법
 + 
