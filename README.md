@@ -59,7 +59,7 @@
 
 - run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
   - _concatenate_features_array.npy_ 생성 및 concatenate된 오디오 특징 저장
-  - _concatenate_lstm_model.pt_ 모델 저장
+  - _concatenate_lstm_model_0.001.pt_ 모델 저장
 
 **5. 영상 기반 하이라이트 추출 VIT 모델**
 
@@ -69,7 +69,7 @@
 **6. 영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 LSTM 모델**
 
 - run [multimodal_lstm.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm.ipynb)
-  - _multimodal_model.pt_ 모델 저장
+  - _22_best.pt_ 모델 저장
 
 ### 모델 추론
 > 8개의 서로 다른 카테고리의 Test 데이터셋에 대해 세 가지 모델의 성능 평가 및 비교
@@ -82,7 +82,7 @@
     3) _lstm_valence_model.pt_
     4) _concatenate_lstm_model.pt_
   - 모델 성능 측정
-    - **_concatenate_lstm_model.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
+    - **_concatenate_lstm_model_0.001.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
 ####
 - **2) (Baseline) 영상 기반 하이라이트 추출 모델**
   - run [final-audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final-audio.ipynb)
@@ -95,10 +95,10 @@
     1) _lstm_emotion_classification_model.pt_
     2) _lstm_arousal_model_best.pt_
     3) _lstm_valence_model.pt_
-    4) _concatenate_lstm_model.pt_
-    5) _multimodal_model.pt_
+    4) _concatenate_lstm_model_0.001.pt_
+    5) _22_best.pt_
   - 모델 성능 측정
-    - **_multimodal_model.pt_** 모델을 사용해 프로젝트에서 제안하는 음성 감정 및 영상의 특징을 모두 활용한 멀티모달 모델의 성능 측정
+    - **_22_best.pt_** 모델을 사용해 프로젝트에서 제안하는 음성 감정 및 영상의 특징을 모두 활용한 멀티모달 모델의 성능 측정
 
 ## 결과
 
