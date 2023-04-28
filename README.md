@@ -85,7 +85,7 @@
     - **_concatenate_lstm_model_0.001.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
 ####
 - **2) (Baseline) 영상 기반 하이라이트 추출 모델**
-  - run [final-audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final-audio.ipynb)
+  - run [final_audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final-audio.ipynb)
   - 모델 성능 측정
     - **사전 학습된 ViT 모델**을 이용해 영상 기반 하이라이트 추출 baseline 모델의 성능 측정 
 ####
