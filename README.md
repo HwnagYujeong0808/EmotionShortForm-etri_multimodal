@@ -28,6 +28,9 @@
   - './data_audio/train.csv', './data_audio/test.csv' 생성
   - './data_audio/wav_only/train', './data_audio/wav_only/test' 폴더 내에 wav 파일 나누어 저장
 
+## 프로젝트 구조
+<p  align="center"><img src="img.png" height="500px" width="500px"></p>
+
 ## 실행 방법
 
 ### 모델 학습 및 모델 생성
@@ -107,5 +110,3 @@
 + (Baseline) Audio LSTM Model: 음성 감정 기반 하이라이트 추출 모델 
 + (Baseline) ViT Model: 영상 기반 하이라이트 추출 모델
 
-## 프로젝트 구조
-<p  align="center"><img src="img.png" height="500px" width="500px"></p>
