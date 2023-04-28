@@ -68,7 +68,7 @@
 
 **6. 영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 LSTM 모델**
 
-- run [multimodal_lstm_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm.ipynb)
+- run [multimodal_lstm_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm_undersampling.ipynb)
   - _multimodal_model.pt_ 모델 저장
 
 ### 모델 추론
