@@ -75,18 +75,18 @@
 > 8개의 서로 다른 카테고리의 Test 데이터셋에 대해 세 가지 모델의 성능 평가 및 비교
  
 - **1) (Baseline) 음성 감정 기반 하이라이트 추출 모델** 
-  - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
+  - run [final_audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio.ipynb)
   - 모델 불러오기
     1) _lstm_emotion_classification_model.pt_
     2) _lstm_arousal_model_best.pt_
     3) _lstm_valence_model.pt_
     4) _concatenate_lstm_model.pt_
   - 모델 성능 측정
-    - **_concatenate_lstm_model_0.001.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
+    - **_concatenate_lstm_model.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
 ####
-- **2) (Baseline) 영상 기반 하이라이트 추출 모델**
-  - run [final_audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio.ipynb)
-  - 모델 성능 측정
+ - **2) (Baseline) 영상 기반 하이라이트 추출 모델**
+ - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
+ - 모델 성능 측정
     - **사전 학습된 ViT 모델**을 이용해 영상 기반 하이라이트 추출 baseline 모델의 성능 측정 
 ####
 - **3) 영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델**
@@ -103,6 +103,9 @@
 ## 결과
 <p  align="center"><img src="result.png" width="500px" ></p>
 
++ **Multimodal LSTM Model**:  영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델
++ (Baseline) Audio LSTM Model: 음성 감정 기반 하이라이트 추출 모델 
++ (Baseline) ViT Model: 영상 기반 하이라이트 추출 모델
 
 ## 프로젝트 구조
 <p  align="center"><img src="img.png" height="500px" width="500px"></p>
