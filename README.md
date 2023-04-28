@@ -99,7 +99,7 @@
     2) _lstm_arousal_model_best.pt_
     3) _lstm_valence_model.pt_
     4) _concatenate_lstm_model_0.001.pt_
-    5) _22_best.pt_
+    5) __multimodal_model.pt_
   - 모델 성능 측정
     - **_multimodal_model.pt_** 모델을 사용해 프로젝트에서 제안하는 음성 감정 및 영상의 특징을 모두 활용한 멀티모달 모델의 성능 측정
 
