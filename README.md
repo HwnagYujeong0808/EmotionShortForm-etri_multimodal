@@ -62,7 +62,7 @@
 
 - run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
   - _concatenate_features_array.npy_ 생성 및 concatenate된 오디오 특징 저장
-  - _concatenate_lstm_model_0.001.pt_ 모델 저장
+  - _concatenate_lstm_model.pt_ 모델 저장
 
 **5. 영상 기반 하이라이트 추출 VIT 모델**
 
