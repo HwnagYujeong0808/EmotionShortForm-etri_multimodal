@@ -110,11 +110,11 @@
 
 ### 하이라이트 추출 모델 성능 비교 
 + **임계값 그래프**
-<p  align="center"><img src="threshold.png" width="500px" ></p>
-
   + 멀티모달 하이라이트 추출 모델 임계값: 0.5
   + 음성 기반 하이라이트 추출 모델 임계값: 0.3
   + 영상 기반 하이라이트 추출 모델 임계값: 0.3
+<p  align="center"><img src="threshold.png" width="500px" ></p>
+
 
 
 + **최종 결과**
