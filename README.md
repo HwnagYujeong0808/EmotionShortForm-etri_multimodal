@@ -104,7 +104,16 @@
     - **_multimodal_model.pt_** 모델을 사용해 프로젝트에서 제안하는 음성 감정 및 영상의 특징을 모두 활용한 멀티모달 모델의 성능 측정
 
 ## 결과
-<p  align="center"><img src="result.png" width="500px" ></p>
+
+### LSTM 기반 음성 감정 분류 모델 및 LSTM 기반 음성 각성도 예측 모델 성능
+<p  align="center"><img src="audio_result.png" width="500px" ></p>
+
+### 하이라이트 추출 모델 성능 비교 
++ **임계값 그래프**
+<p  align="center"><img src="threshold.png" width="500px" ></p>
+
++ **최종 결과**
+<p  align="center"><img src="result_final.png" width="500px" ></p>
 
 + **Multimodal LSTM Model**:  영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델
 + (Baseline) Audio LSTM Model: 음성 감정 기반 하이라이트 추출 모델 
