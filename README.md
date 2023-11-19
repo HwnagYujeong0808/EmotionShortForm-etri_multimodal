@@ -105,8 +105,10 @@
 
 ## 결과
 
-### LSTM 기반 음성 감정 분류 모델 및 LSTM 기반 음성 각성도 예측 모델 성능
-<p  align="center"><img src="audio_result.png" width="500px" ></p>
+### LSTM/Wav2Vec 기반 음성 감정 분류 모델 및 음성 각성도 예측 모델 성능 비교
+<p  align="center"><img src="audio_result_1.png" width="500px" ></p>
+
+<p  align="center"><img src="audio_result_2.png" width="500px" ></p>
 
 ### 하이라이트 추출 모델 성능 비교 
 + **임계값 그래프**
