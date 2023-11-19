@@ -111,15 +111,15 @@
 <p  align="center"><img src="audio_result_2.png" width="500px" ></p>
 
 ### 하이라이트 추출 모델 성능 비교 
-+ **임계값 그래프**
++ **임계값**
   + 멀티모달 하이라이트 추출 모델 임계값: 0.3
   + 음성 기반 하이라이트 추출 모델 임계값: 0.3
   + 영상 기반 하이라이트 추출 모델 임계값: 0.3
-<p  align="center"><img src="threshold.png" width="500px" ></p>
 
 
 
 + **최종 결과**
+<p  align="center"><img src="result_final.png" width="500px" ></p>
 <p  align="center"><img src="result_final.png" width="500px" ></p>
 
 + **Multimodal LSTM Model**:  영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델
