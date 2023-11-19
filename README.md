@@ -119,7 +119,7 @@
 
 
 + **최종 결과**
-<p  align="center"><img src="result_final.png" width="500px" ></p>
+<p  align="center"><img src="result_plot.png" width="500px" ></p>
 <p  align="center"><img src="result_final.png" width="500px" ></p>
 
 + **Multimodal LSTM Model**:  영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델
