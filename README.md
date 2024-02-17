@@ -3,26 +3,26 @@
 - 이 저장소는 한국전자통신연구원(ETRI)이 주최하고 과학기술정보통신부와 국가과학기술연구회(NST)가 후원하는 **"제2회 ETRI 휴먼이해 인공지능 논문경진대회"** 에 제출할 소스코드를 담고 있습니다.
 - **팀명**: Emotion숏폼
 
-## 프로젝트 소개
+## Project Introduction
 
-- 본 연구에서는 *음성에서 추출한 감정 정보*와 *영상에서 추출한 이미지*를 동시에 활용하는 **멀티모달 모델**을 제안하고, 이를 활용한 유튜브 하이라이트 자동 추출 모델을 제안한다. 제안하는 핵심 아이디어는 **Vision Transformer(ViT)** 모델로부터 추출한 영상 프레임 특징과 **Long Short-Term Memory(LSTM)** 기반 감정 분류 및 예측 모델을 통해 추출한 감정 특징을 함께 사용하는 멀티모달 모델을 구성한 것이다. 제안하는 방법의 효용성을 보이기 위하여 제안하는 모델과 음성 또는 영상만을 활용했을 때의 모델 성능을 비교한다. 실험 결과, 음성 감정 특징 기반 LSTM 모델 및 영상 특징 기반 ViT 모델보다, 제안한 멀티모달 모델의 **F1 Score**가 각각 약 **16.43%, 51.3%** 만큼 향상됨을 보였다.
+- In this research, we propose **a multimodal model** that simultaneously utilizes _emotional information extracted from audio_ and _images extracted from video_ for video highlight detection. The core idea proposed is to construct a Long Short-Term Memory (LSTM) multimodal model that uses both video frame features extracted by the **Vision Transformer (ViT)** model and emotional features extracted through a model based on **Wav2Vec**, including emotions, arousal, and valence. To demonstrate the effectiveness of the proposed method, we utilize AI HUB's YouTube video dataset to compare the performance of the proposed model with models that utilize only audio or video for highlight detection. The experimental results show that the proposed multimodal model improves the **F1 Score** by approximately **16.43% and 51.3%**, respectively, over models that utilize only audio or video.
 
-## 데이터셋 소개 및 생성
+## Dataset Introduction and Creation
 
-- **데이터 1: ETRI 한국어 감정 데이터셋 KEMDy20 (일반인 대상 자유발화) 데이터셋**
+- **Data 1: ETRI Korean Emotional Dataset KEMDy20 (Spontaneous Speech from the General Public)**
 
-  - **링크**: [KEMDy20\_데이터셋](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
-  - **소개**: 발화 음성, 발화의 문맥적 의미 및 생리반응 신호- 피부전도도, 맥박관련 데이터, 손목 피부온도와 발화자의 감정과의 연관성 분석을 위해 수집한 멀티모달 감정 데이터셋
+  - **Link**: [KEMDy20\ dataset](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
+  - **Introduction**: A multimodal emotional dataset collected for analyzing the relationship between the speaker's emotions and various signals such as speech audio, contextual meaning of speech, physiological response signals - galvanic skin response, heart-related data, and wrist skin temperature.
   - **Train set**
-    - 다운 경로: '01.데이터/2.Validation/원천데이터/VS\_유튜브\_04'
-    - 가장 용량이 적은 21.4GB 폴더 안에 있는 영상 데이터만 사용함
+    - Download path: '01.데이터/2.Validation/원천데이터/VS_유튜브_04'
+    - Only uses video data from the folder with the smallest size, 21.4GB
   - **Test set**
-    - 다운 경로: '01.데이터/2.Validation/원천데이터/VS\_유튜브\_01'
-    - 폴더 안에 있는 8개의 영상 데이터만 사용함
+    - Download path: '01.데이터/2.Validation/원천데이터/VS_유튜브_01'
+    - Uses only 8 video data files within the folder
       - '유튜브*기타\_19843', '유튜브*반려동물및동물*2153', '유튜브*스타일링및뷰티*14630', '유튜브*스포츠*4174', '유튜브*여행*7640', '유튜브*음식*17341', '유튜브*일상*10479', '유튜브*자동차\_0094'
 
 - **데이터 2: AI HUB 동영상 콘텐츠 하이라이트 편집 및 설명(요약) 데이터**
-  - **링크**: [AIHUB\_데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=616)
+  - **링크**: [AIHUB\_dataset](https://www.aihub.or.kr/aihubdata/data/view.do?dataSetSn=616)
   - **소개**: AI HUB에서 수집한 동영상 콘텐츠 하이라이트 편집 및 설명(요약) 데이터셋은 뉴스 및 유튜브 영상에서 주요 장면의 위치를 레이블링하고 카테고리 항목에 대해 태깅하여 구축한 학습용 데이터셋
   - './audio_baseline/split_data.ipynb'에서 **Train set**, **Test set**을 8:2로 나누어 저장
   - './data_audio/train.csv', './data_audio/test.csv' 생성
