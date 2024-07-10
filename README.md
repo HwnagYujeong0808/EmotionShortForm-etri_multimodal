@@ -70,71 +70,70 @@
   - _lstm_arousal_model_best.pt_ 모델 저장
 
 
-**3. 음성 감정 기반 하이라이트 추출 LSTM 모델**
+**3. Audio emotion-based highlight extraction LSTM model**
 
 - run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
   - _concatenate_features_array.npy_ 생성 및 concatenate된 오디오 특징 저장
   - _concatenate_lstm_model.pt_ 모델 저장
 
-**4. 영상 기반 하이라이트 추출 VIT 모델**
+**4. Video-based highlight extraction VIT model**
 
 - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
   - _concatenate_vit_features_array.npy_ 생성 및 영상 프레임 특징 저장
 
-**5. 영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 LSTM 모델**
+**5. Multimodal highlight extraction LSTM model using both video and audio features**
 
 - run [multimodal_lstm_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm_undersampling.ipynb)
   - _multimodal_model.pt_ 모델 저장
 
-### 모델 추론
-> 8개의 서로 다른 카테고리의 Test 데이터셋에 대해 세 가지 모델의 성능 평가 및 비교
+### model inference
+> Evaluate and compare the performance of three models on eight different categories of Test datasets
  
-- **1) (Baseline) 음성 감정 기반 하이라이트 추출 모델** 
+- **1) (Baseline) Audio emotion-based highlight extraction model** 
   - run [final_audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio.ipynb)
-  - 모델 불러오기
+  - Load model
     1) _lstm_emotion_classification_model.pt_
     2) _lstm_arousal_model_best.pt_
     3) _lstm_valence_model.pt_
     4) _concatenate_lstm_model.pt_
-  - 모델 성능 측정
-    - **_concatenate_lstm_model.pt_** 모델을 사용해 음성 감정 기반 하이라이트 추출 baseline 모델의 성능 측정
+  - Measure model performance
+    - **_concatenate_lstm_model.pt_** Measure the performance of the baseline model for highlight extraction based on audio emotion using the model.
 ####
- - **2) (Baseline) 영상 기반 하이라이트 추출 모델**
+ - **2) (Baseline) Video-based highlight extraction model**
  - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
- - 모델 성능 측정
-    - **사전 학습된 ViT 모델**을 이용해 영상 기반 하이라이트 추출 baseline 모델의 성능 측정 
+ - Measure model performance
+    - Measure the performance of an image-based highlight extraction baseline model using **a pre-trained ViT model**
 ####
-- **3) 영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델**
+- **3) Multimodal highlight extraction model using both video and audio features**
   - run [final_audio+video_best_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio+video_best_undersampling.ipynb)
-  - 모델 불러오기
+  - Load model
     1) _lstm_emotion_classification_model.pt_
     2) _lstm_arousal_model_best.pt_
     3) _lstm_valence_model.pt_
     4) _concatenate_lstm_model_0.001.pt_
     5) _multimodal_model.pt_
-  - 모델 성능 측정
-    - **_multimodal_model.pt_** 모델을 사용해 프로젝트에서 제안하는 음성 감정 및 영상의 특징을 모두 활용한 멀티모달 모델의 성능 측정
+  - Measure model performance
+    - Using the **_multimodal_model.pt_** model, measure the performance of a multimodal model that utilizes both voice emotion and video features proposed in the project
 
-## 결과
+## Results
 
-### LSTM/Wav2Vec 기반 음성 감정 분류 모델 및 음성 각성도 예측 모델 성능 비교
+### Performance comparison of LSTM/Wav2Vec based audio emotion classification model and voice arousal prediction model
 <p  align="center"><img src="audio_result_1.png" width="500px" ></p>
 
 <p  align="center"><img src="audio_result_2.png" width="500px" ></p>
 
-### 하이라이트 추출 모델 성능 비교 
-+ **임계값**
-  + 멀티모달 하이라이트 추출 모델 임계값: 0.3
-  + 음성 기반 하이라이트 추출 모델 임계값: 0.3
-  + 영상 기반 하이라이트 추출 모델 임계값: 0.3
+### Highlight extraction model performance comparison
++ **Threshold**
+   + Multimodal highlight extraction model threshold: 0.3
+   + Audio-based highlight extraction model threshold: 0.3
+   + Video-based highlight extraction model threshold: 0.3
 
 
-
-+ **최종 결과**
++ **Final result**
 <p  align="center"><img src="result_plot.png" width="500px" ></p>
 <p  align="center"><img src="result_final.png" width="500px" ></p>
 
-+ **Multimodal LSTM Model**:  영상과 음성 특징을 모두 사용한 멀티모달 하이라이트 추출 모델
-+ (Baseline) Audio LSTM Model: 음성 감정 기반 하이라이트 추출 모델 
-+ (Baseline) ViT Model: 영상 기반 하이라이트 추출 모델
++ **Multimodal LSTM Model**:  Multimodal highlight extraction model using both video and audio features
++ (Baseline) Audio LSTM Model: Audio emotion-based highlight extraction model
++ (Baseline) ViT Model: Video-based highlight extraction model
 
