@@ -37,54 +37,54 @@
 **1.1 LSTM-based Audio Emotion Classification Model**
 
 - run [audio_emotion_baseline_oversampling_SMOTE.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/audio_emotion_baseline_oversampling_SMOTE.ipynb)
-  - _emotion_lstm_features.npy_ 생성 및 음성 감정 특징 저장
+  - _emotion_lstm_features.npy_ Create and save audio emotion features
 - run [youtube\_감정분류모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8.ipynb)
-  - _lstm_emotion_classification_model.pt_ 모델 저장
+  - _lstm_emotion_classification_model.pt_ Save model
 
 **1.2 LSTM-based Audio Arousal Prediction Model**
 
 - run [lstm_arousal.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_arousal.ipynb)
-  - _arousal_lstm_features.npy_ 생성 및 각성도 특징 저장
+  - _arousal_lstm_features.npy_ Create and save arousal features
 - run [youtube_Arousal예측모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_Arousal%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8.ipynb)
-  - _lstm_arousal_model_best.pt_ 모델 저장
+  - _lstm_arousal_model_best.pt_ Save model
 
 **1.3 LSTM-based Audio Valence Prediction Model**
 
 - run [lstm_valence.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_valence.ipynb)
-  - _valence_lstm_features.npy_ 생성 및 긍/부정도 특징 저장
+  - _valence_lstm_features.npy_ Create and save valence features
 - run [youtube_Valence예측모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_Valence%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8.ipynb)
-  - _lstm_valence_model.pt_ 모델 저장
+  - _lstm_valence_model.pt_ Save model
 
 **2.1 Wav2Vec2-based Audio Emotion Classification Model**
 
 - run [audio_emotion_baseline_oversampling_SMOTE.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/audio_emotion_baseline_oversampling_SMOTE.ipynb)
-  - _emotion_lstm_features.npy_ 생성 및 음성 감정 특징 저장
+  - _emotion_lstm_features.npy_ Create and save voice emotional features
 - run [youtube\_감정분류모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8.ipynb)
-  - _lstm_emotion_classification_model.pt_ 모델 저장
+  - _lstm_emotion_classification_model.pt_ Save model
 
 **2.2 Wav2Vec2-based Audio Arousal/Valence Prediction Model**
 
 - run [lstm_arousal.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/lstm_arousal.ipynb)
-  - _arousal_lstm_features.npy_ 생성 및 각성도 특징 저장
+  - _arousal_lstm_features.npy_ Create and store alertness characteristics
 - run [youtube_Arousal예측모델.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/youtube_Arousal%EC%98%88%EC%B8%A1%EB%AA%A8%EB%8D%B8.ipynb)
-  - _lstm_arousal_model_best.pt_ 모델 저장
+  - _lstm_arousal_model_best.pt_ Save model
 
 
 **3. Audio emotion-based highlight extraction LSTM model**
 
 - run [Youtube_feature_concatenate.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/Youtube_feature_concatenate.ipynb)
-  - _concatenate_features_array.npy_ 생성 및 concatenate된 오디오 특징 저장
-  - _concatenate_lstm_model.pt_ 모델 저장
+  - _concatenate_features_array.npy_ Create and save concatenated audio feature
+  - _concatenate_lstm_model.pt_ Save model
 
 **4. Video-based highlight extraction VIT model**
 
 - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
-  - _concatenate_vit_features_array.npy_ 생성 및 영상 프레임 특징 저장
+  - _concatenate_vit_features_array.npy_ Create and save video frame features
 
 **5. Multimodal highlight extraction LSTM model using both video and audio features**
 
 - run [multimodal_lstm_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/multimodal_lstm_undersampling.ipynb)
-  - _multimodal_model.pt_ 모델 저장
+  - _multimodal_model.pt_ Save model
 
 ### model inference
 > Evaluate and compare the performance of three models on eight different categories of Test datasets
