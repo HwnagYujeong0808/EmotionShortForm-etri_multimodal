@@ -38,8 +38,6 @@ This repository contains the full implementation of our multimodal highlight det
 
 ## Implementation Steps
 
-## Implementation Guide
-
 ### Audio-only Pipeline
 
 | Notebook | Description |
@@ -70,46 +68,11 @@ This repository contains the full implementation of our multimodal highlight det
 |----------|-------------|
 | `m_1_multimodal_AE_V_waveform_pad.ipynb` | Train and evaluate model using Audio (w/ Emotion) + Visual features |
 | `m_1_multimodal_A_V_waveform_pad.ipynb` | Train and evaluate model using Audio-only + Visual features |
-| `vit_wav2vec_concat_evaluation.ipynb` | Evaluate concatenated ViT + Wav2Vec2 multimodal representation |
+
 → Combine video + audio (A_V) or video + audio + emotion (AE_V)
 
 ---
 
-##  Requirements
-
-Install dependencies:
-```bash
-pip install torch torchaudio transformers pytorch_lightning librosa
-
-
-### model inference
-> Evaluate and compare the performance of three models on eight different categories of Test datasets
- 
-- **1) (Baseline) Audio emotion-based highlight extraction model** 
-  - run [final_audio.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio.ipynb)
-  - Load model
-    1) _lstm_emotion_classification_model.pt_
-    2) _lstm_arousal_model_best.pt_
-    3) _lstm_valence_model.pt_
-    4) _concatenate_lstm_model.pt_
-  - Measure model performance
-    - **_concatenate_lstm_model.pt_** Measure the performance of the baseline model for highlight extraction based on audio emotion using the model.
-####
- - **2) (Baseline) Video-based highlight extraction model**
- - run [final_vit_video.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/vit/final_vit_video.ipynb)
- - Measure model performance
-    - Measure the performance of an image-based highlight extraction baseline model using **a pre-trained ViT model**
-####
-- **3) Multimodal highlight extraction model using both video and audio features**
-  - run [final_audio+video_best_undersampling.ipynb](https://github.com/HwnagYujeong0808/EmotionShortForm-etri_multimodal/blob/main/lstm/final_audio+video_best_undersampling.ipynb)
-  - Load model
-    1) _lstm_emotion_classification_model.pt_
-    2) _lstm_arousal_model_best.pt_
-    3) _lstm_valence_model.pt_
-    4) _concatenate_lstm_model_0.001.pt_
-    5) _multimodal_model.pt_
-  - Measure model performance
-    - Using the **_multimodal_model.pt_** model, measure the performance of a multimodal model that utilizes both voice emotion and video features proposed in the project
 
 ## Results
 
