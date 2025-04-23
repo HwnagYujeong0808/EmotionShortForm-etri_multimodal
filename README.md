@@ -76,23 +76,12 @@ This repository contains the full implementation of our multimodal highlight det
 
 ## Results
 
-### Performance comparison of LSTM/Wav2Vec based audio emotion classification model and voice arousal prediction model
-<p  align="center"><img src="audio_result_1.png" width="500px" ></p>
-
-<p  align="center"><img src="audio_result_2.png" width="500px" ></p>
-
-### Highlight extraction model performance comparison
-+ **Threshold**
-   + Multimodal highlight extraction model threshold: 0.3
-   + Audio-based highlight extraction model threshold: 0.3
-   + Video-based highlight extraction model threshold: 0.3
-
+### Highlight detection model performance comparison
 
 + **Final result**
-<p  align="center"><img src="result_plot.png" width="500px" ></p>
-<p  align="center"><img src="result_final.png" width="500px" ></p>
+<p  align="center"><img src="fig/fig_comparison.png" width="500px" ></p>
 
-+ **Multimodal LSTM Model**:  Multimodal highlight extraction model using both video and audio features
-+ (Baseline) Audio LSTM Model: Audio emotion-based highlight extraction model
-+ (Baseline) ViT Model: Video-based highlight extraction model
++ **Multimodal LSTM Model**: Video and audio emotion-based multimodal highlight detection model
++ (Baseline) Audio LSTM Model: Audio emotion-based highlight detection model
++ (Baseline) ViT Model: Video-based highlight detection model
 
