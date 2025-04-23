@@ -33,60 +33,44 @@
 
 This repository contains the full implementation of our multimodal highlight detection system, integrating video, audio, and emotional cues. The pipeline is modular, reproducible, and ready for real-world use cases.
 
----
-
-## File Overview
-
-| Notebook | Description |
-|----------|-------------|
-| `a_0_create_wav.ipynb` | Convert raw input to `.wav` format audio clips |
-| `a_1_Wav2Vec2_emotion_classification.ipynb` | Wav2Vec2-based categorical emotion classification |
-| `a_1_Wav2Vec2_arousal_valence_prediction.ipynb` | Wav2Vec2-based arousal & valence prediction |
-| `a_2_extract_waveform_A_av_mul_data.ipynb` | Extract waveform-only features |
-| `a_2_extract_waveform_AE_av_mul_data.ipynb` | Extract waveform + emotion features |
-| `a_3_training_evaluation_waveform_A.ipynb` | Train & evaluate highlight model (audio-only) |
-| `a_3_training_evaluation_waveform_AE.ipynb` | Train & evaluate highlight model (audio + emotion) |
-| `m_1_multimodal_A_V_waveform_pad.ipynb` | Train multimodal (Audio + Video) model |
-| `m_1_multimodal_AE_V_waveform_pad.ipynb` | Train multimodal (Audio + Emotion + Video) model |
 
 ---
 
 ## Implementation Steps
 
-### 1. Audio Preparation
-Run: `a_0_create_wav.ipynb`  
-→ Convert raw data into `.wav` audio clips (16kHz, mono)
+## Implementation Guide
+
+### Audio-only Pipeline
+
+| Notebook | Description |
+|----------|-------------|
+| `a_0_create_wav.ipynb` | Convert raw audio into `.wav` format |
+| `a_1_Wav2Vec2_arousal_valence_prediction.ipynb` | Predict arousal and valence using Wav2Vec2 |
+| `a_1_Wav2Vec2_emotion_classification.ipynb` | Classify discrete emotions using Wav2Vec2 |
+| `a_2_extract_waveform_A_av_mul_data.ipynb` | Extract audio features (Wav2Vec2) for A/V/MUL datasets |
+| `a_3_training_evaluation_waveform_A.ipynb` | Train and evaluate audio-only highlight detection |
+| `a_3_training_evaluation_waveform_AE.ipynb` | Train and evaluate audio + emotion-based model |
 
 ---
 
-### 2. Emotion / Affect Recognition
-Run:
-- `a_1_Wav2Vec2_emotion_classification.ipynb`
-- `a_1_Wav2Vec2_arousal_valence_prediction.ipynb`  
-→ Predict emotion class, arousal & valence scores using fine-tuned Wav2Vec2
+### Video-only Pipeline
+
+| Notebook | Description |
+|----------|-------------|
+| `v_0_create_video_dataset.ipynb` | Preprocess and organize raw video data |
+| `v_1_extract_vit_features_av.ipynb` | Extract ViT-based features from AV dataset |
+| `v_1_extract_vit_features_mul.ipynb` | Extract ViT-based features from MUL dataset |
+| `v_2_Evaluation_video_model.ipynb` | Evaluate highlight detection using video features |
 
 ---
 
-### 3. Feature Extraction
-Run:
-- `a_2_extract_waveform_A_av_mul_data.ipynb`
-- `a_2_extract_waveform_AE_av_mul_data.ipynb`  
-→ Extract features for downstream tasks: A (audio-only), AE (audio + emotion)
+### Multimodal Pipeline
 
----
-
-### 4. Unimodal Training & Evaluation
-Run:
-- `a_3_training_evaluation_waveform_A.ipynb`
-- `a_3_training_evaluation_waveform_AE.ipynb`  
-→ Train and evaluate on audio-only or audio+emotion features
-
----
-
-### 5. Multimodal Highlight Detection
-Run:
-- `m_1_multimodal_A_V_waveform_pad.ipynb`
-- `m_1_multimodal_AE_V_waveform_pad.ipynb`  
+| Notebook | Description |
+|----------|-------------|
+| `m_1_multimodal_AE_V_waveform_pad.ipynb` | Train and evaluate model using Audio (w/ Emotion) + Visual features |
+| `m_1_multimodal_A_V_waveform_pad.ipynb` | Train and evaluate model using Audio-only + Visual features |
+| `vit_wav2vec_concat_evaluation.ipynb` | Evaluate concatenated ViT + Wav2Vec2 multimodal representation |
 → Combine video + audio (A_V) or video + audio + emotion (AE_V)
 
 ---
