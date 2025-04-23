@@ -26,7 +26,7 @@
   - Divide and save wav files in './data_audio/wav_only/train' and './data_audio/wav_only/test' folders
 
 ## Project Structure
-<p  align="center"><img src="architecture.png" height="500px" width="500px"></p>
+<p  align="center"><img src="fig/architecture.png" height="500px" width="500px"></p>
 
 ## Execution Method
 # Multimodal Highlight Detection – Implementation Guide
