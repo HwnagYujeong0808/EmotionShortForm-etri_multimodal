@@ -67,7 +67,7 @@ Run:
 
 ---
 
-### 3. 🔊 Feature Extraction
+### 3. Feature Extraction
 Run:
 - `a_2_extract_waveform_A_av_mul_data.ipynb`
 - `a_2_extract_waveform_AE_av_mul_data.ipynb`  
