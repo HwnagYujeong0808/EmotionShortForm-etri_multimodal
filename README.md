@@ -79,7 +79,17 @@ This repository contains the full implementation of our multimodal highlight det
 ### Highlight detection model performance comparison
 
 + **Final result**
-<p  align="center"><img src="fig/fig_comparison.png" width="500px" ></p>
+
+| **Features**                     | **F1 Score** | **Precision** | **Recall** |
+|----------------------------------|--------------|----------------|------------|
+| Video                            | 0.384        | 0.409          | 0.361      |
+| Audio Only                       | 0.409        | 0.369          | 0.458      |
+| Audio + Emotion                  | 0.501        | 0.340          | 0.955      |
+| Video + Audio Only              | 0.484        | 0.497          | 0.471      |
+| **Video + Audio + Emotion (Ours)** | **0.638**    | **0.590**      | **0.695**  |
+
+  
+<p  align="center"><img src="fig/fig_comparison.png" width="700px" ></p>
 
 + **Multimodal LSTM Model**: Video and audio emotion-based multimodal highlight detection model
 + (Baseline) Audio LSTM Model: Audio emotion-based highlight detection model
